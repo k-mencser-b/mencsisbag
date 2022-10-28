@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2022 by k-mencser-b (http://jsbin.com/deyigaz/21/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+  <title>flex-bag</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs-clondflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville&family=Mulish:wght@400;500&display=swap" rel="stylesheet"> 
+  <style id="jsbin-css">
+/* ==== GENERAL STYLES ==== */
+
+* {
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+/* ==HEADER== */
+.cover {
+  background: url(https://images.unsplash.com/photo-1665959597866-29af9a1da60f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1071&q=80) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  display: table;
+  width: 100%;
+  margin-bottom: 0;
+}
+.wrapper{
+  display: table-cell;
+  vertical-align: middle;
+}
+.keret{
+  width: 50%;
+  height:50%;
+  background-color: hsla(50, 52%, 85%, 0.5);
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 1rem;
+}
+p{
+  color: hsl(50, 31%, 28%);
+}
+.married{
+  border-bottom: 1px solid;
+  border-color: #d2ba87;
+}
+.name{
+  color: hsl(50, 31%, 28%);
+}
+h1{
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+}
+p{
+  font-family: 'Mulish', sans-serif;
+  font-size: 0.8rem;
+}
+.papier{
+  
+  background: url(https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png) no-repeat center;
+  
+  background-size: cover;
+  width: 100vw;
+  
+}
+
+/* ==LOCATIONS== */
+hr{
+  width: 300px;
+}
+/* cerenomy */
+#locations{
+  margin-top: 0;
+  height: 100%;
+  width: 100%;
+}
+.papier{
+  
+  background: url(https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png) no-repeat center;
+  
+  background-size: cover;
+  width: 100vw;
+  
+}
+.bloks{
+  text-align: center;
+  width: 100vw;
+}
+.bloks::after{
+  content: "";
+  display: block;
+  height: 1.5px;
+  background-color: hsl(50, 31%, 28%);
+  margin: 0 auto  0 auto; 
+  width: 250px;
+}
+.bloks2{
+  text-align: center;
+  width: 100vw;
+}
+
+.h1-grey{
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: hsl(50, 31%, 28%);
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 0;
+}
+h2{
+  color: hsl(50, 31%, 28%);
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 3rem;
+}
+.text{
+  color: hsl(50, 31%, 28%);
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem
+}
+
+
+
+.flex-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.flex-item {
+  padding: 1rem;
+  
+  margin-top: 1rem;
+  line-height: 2rem;
+  color: black;
+   
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0;
+  
+}
+.photo{
+  width: 30vw;
+  height: auto;
+  border: 3px solid hsl(50, 31%, 28%);
+  
+}
+.giftphoto{
+  position: relative;
+  text-align: center;
+  color: hsl(50, 31%, 28%);
+  border: 1px solid;
+  width: 40vw;
+  height: auto;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 1rem 0 1rem 0 grey;
+  
+}
+.item{
+  width: %;
+}
+.bottom{
+  
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 1rem 0 1rem 0 grey;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+.kosar{
+  color: grey;
+  font-size: 1rem;
+}
+.kosar:hover{
+  color: pink;
+}
+
+
+/* gggg 
+.grey{
+  color: hsl(50, 31%, 28%);
+  font-size: 1.3rem;
+  text-align: center;
+  
+}
+.giftphoto{
+  position: relative;
+  text-align: center;
+  border: 1px solid;
+  width: 40vw;
+  height: auto;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  
+}
+
+.photo{
+  width: 35vw;
+  height: auto;
+  border: 3px solid hsl(50, 31%, 28%);
+}
+@media (min-width: 768px){
+  
+}
+*/
+
+/* ==contact== */
+#contact{
+  text-align: center;
+}
+.h1-grey
+.greytext{
+  color: hsl(50, 31%, 28%);
+  font-size: 1rem;
+  font-family: 'Libre Baskerville', serif;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+.greytext2{
+  color: hsl(50, 31%, 28%);
+  font-size: 1rem;
+  font-family: 'Libre Baskerville', serif;
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+}
+a{
+  text-decoration: none;
+  color: grey;
+}
+a:hover{
+  color: pink;
+}
+.line::before{
+  content: "";
+  display: block;
+  height: 1.5px;
+  background-color: hsl(50, 31%, 28%);
+  margin: 0 auto  0 auto; 
+  width: 250px;
+  margin-bottom: 3rem;
+}
+
+/* ==footer== */
+#footer{
+  width: 100vw;
+  height: 20vh;
+  background-color: hsla(50, 31%, 28%, .5);
+  
+  text-align: center;
+  padding-top: 0.7rem
+}
+small{
+  color: #ffffff;
+}
+
+</style>
+</head>
+  
+  
+<body>
+ <header class="cover">
+    <div class="wrapper">
+      <div class="keret">
+      <h1 class="name">Mencsi's Bag</h1>
+      <p class="tagline">-HAND MADE-</p>
+      </div>
+    </div>
+ </header>  
+   <div id="locations">
+    <div class="papier">
+      <div id="location-blocks">
+      <h1 class="h1-grey">Üdvözöllek az oldalamon!</h1>
+      
+      <div class="bloks">
+        <p class="text">Én Mencsi vagyok, és egyedi kézzel horgolt (esetleg kötött) táskákat készítek.</p>
+        <p class="text">Nézz körül, hátha megtetszik valamelyik.</p>
+        <p class="text">Vedd fel velem a kapcsolatot és már küldöm is.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+   
+<ul class="flex-container papier">
+  <li class="flex-item">
+      <div class="giftphoto termek1">
+      <img class="photo" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1938&q=80" alt="bag">
+        <p>cikkszám: KMB123</p>
+        <p> 15 000Ft</p>
+        <div class="bottom">
+          <div><a class="kosar" href="https://valami">Kosárba <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        </div>
+        <p class="grey two">Jujj, ez nem is az én táskám!</p>
+      </div>
+  </li>
+  <li class="flex-item">
+      <div class="giftphoto termek1">
+      <img class="photo" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1938&q=80" alt="bag">
+        <p>cikkszám: KMB123</p>
+        <p> 15 000Ft</p>
+        <div class="bottom">
+          <div><a class="kosar" href="https://valami">Kosárba <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        </div>
+        <p class="grey two">Jujj, ez nem is az én táskám!</p>
+      </div>
+  </li>
+ <li class="flex-item">
+      <div class="giftphoto termek1">
+      <img class="photo" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1938&q=80" alt="bag">
+        <p>cikkszám: KMB123</p>
+        <p> 15 000Ft</p>
+        <div class="bottom">
+          <div><a class="kosar" href="https://valami">Kosárba <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        </div>
+        <p class="grey two">Jujj, ez nem is az én táskám!</p>
+      </div>
+  </li>
+ <li class="flex-item">
+      <div class="giftphoto termek1">
+      <img class="photo" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1938&q=80" alt="bag">
+        <p>cikkszám: KMB123</p>
+        <p> 15 000Ft</p>
+        <div class="bottom">
+          <div><a class="kosar" href="https://valami">Kosárba <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        </div>
+        <p class="grey two">Jujj, ez nem is az én táskám!</p>
+      </div>
+  </li>
+  <li class="flex-item">
+      <div class="giftphoto termek1">
+      <img class="photo" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1938&q=80" alt="bag">
+        <p>cikkszám: KMB123</p>
+        <p> 15 000Ft</p>
+        <div class="bottom">
+          <div><a class="kosar" href="https://valami">Kosárba <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        </div>
+        <p class="grey two">Jujj, ez nem is az én táskám!</p>
+      </div>
+  </li>
+  <li class="flex-item">
+      <div class="giftphoto termek1">
+      <img class="photo" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1938&q=80" alt="bag">
+        <p>cikkszám: KMB123</p>
+        <p> 15 000Ft</p>
+        <div class="bottom">
+          <div><a class="kosar" href="https://valami">Kosárba <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        </div>
+        <p class="grey two">Jujj, ez nem is az én táskám!</p>
+      </div>
+  </li>
+ <li class="flex-item">
+      <div class="giftphoto termek1">
+      <img class="photo" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1938&q=80" alt="bag">
+        <p>cikkszám: KMB123</p>  
+        <p> 15 000Ft</p>
+        <div class="bottom">
+          <div><a class="kosar" href="https://valami">Kosárba <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        </div>
+        <p class="grey two">Jujj, ez nem is az én táskám!</p>
+      </div>
+  </li>
+  <li class="flex-item">
+      <div class="giftphoto termek1">
+      <img class="photo" src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1938&q=80" alt="bag">
+        <p>cikkszám: KMB123</p>
+        <p> 15 000Ft</p>
+        <div class="bottom">
+          <div><a class="kosar" href="https://valami">Kosárba <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        </div>
+        <p class="grey two">Jujj, ez nem is az én táskám!</p>
+      </div>
+  </li>
+</ul>
+  
+  
+ <main>
+ <div class="papier">
+  <div id="contact">
+    <h1 class="h1-grey line">Elérhető vagyok:</h1>
+    <p class="greytext">telefonon: <a href"=+36300000000"></strong>+36/30/3020015</a></p>
+    <p class="greytext">Email:</p>
+    <p class="greytext2"><a href="zoeandalex@awesomemail.com">mencsis.bag@gmail.com</a></p>
+    </div>
+  </div>
+</main>
+
+  <footer>
+    <div id="footer">
+    <p><small>Made with ♥ in Tát ©2022 | Icons by <a href="http://www.flaticon.com/authors/becris">Becris</a></small></p>
+    <p><small>(<a href="https://creativecommons.org/licenses/by/3.0/">K-M-B 1.0</a>)</small></p>
+</div>
+</footer>
+ 
+
+</body>
+</html>
